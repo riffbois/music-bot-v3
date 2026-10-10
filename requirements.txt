@@ -1,6 +1,13 @@
-# v3: pytgcalls dev (3.0.0.dev24) — satu-satunya versi yang punya wheel
-# tgcalls untuk Python 3.11+ (tgcalls==3.0.0.dev6).
-# v2 (pytgcalls==2.1.0) butuh tgcalls==2.0.0 yang mentok di Python 3.10.
+# v3-diet: install TANPA dependencies otomatis (--no-deps) supaya hemat disk.
+# pytgcalls 3.0.0.dev24 secara resmi butuh av + opencv-python-headless
+# (total ~100MB download, ~250MB ter-install) TAPI keduanya cuma dipakai
+# untuk fitur VIDEO. Bot ini audio-only dan muter file via library native
+# tgcalls (C++), jadi av/cv2 tidak pernah dipanggil — diganti stub kosong
+# (av.py, cv2.py) supaya `import` di pytgcalls/utils.py tetap sukses.
+--no-deps
 pyrogram==2.0.106
+pyaes==1.6.1
+pysocks==1.7.1
 pytgcalls==3.0.0.dev24
+tgcalls==3.0.0.dev6
 yt-dlp>=2024.8.6
