@@ -1,0 +1,11 @@
+app = "boimusicbot"
+primary_region = "sin"
+
+[build]
+
+[env]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
