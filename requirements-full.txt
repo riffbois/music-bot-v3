@@ -1,0 +1,14 @@
+# v3-diet: di-install via start command dengan flag --no-deps
+# (pip install --no-deps -r requirements-full.txt)
+# supaya hemat disk. pytgcalls 3.0.0.dev24 secara resmi butuh av +
+# opencv-python-headless (total ~100MB download, ~250MB ter-install)
+# TAPI keduanya cuma dipakai untuk fitur VIDEO. Bot ini audio-only dan
+# muter file via library native tgcalls (C++), jadi av/cv2 tidak pernah
+# dipanggil — diganti stub kosong (av.py, cv2.py) supaya `import` di
+# pytgcalls/utils.py tetap sukses.
+pyrogram==2.0.106
+pyaes==1.6.1
+pysocks==1.7.1
+pytgcalls==3.0.0.dev24
+tgcalls==3.0.0.dev6
+yt-dlp>=2024.8.6

@@ -1,14 +1,4 @@
-# v3-diet: install TANPA dependencies otomatis supaya hemat disk.
-# JANGAN taruh --no-deps di file ini (pip nolak) — set env var PIP_NO_DEPS=1
-# di botkeep sebagai gantinya.
-# pytgcalls 3.0.0.dev24 secara resmi butuh av + opencv-python-headless
-# (total ~100MB download, ~250MB ter-install) TAPI keduanya cuma dipakai
-# untuk fitur VIDEO. Bot ini audio-only dan muter file via library native
-# tgcalls (C++), jadi av/cv2 tidak pernah dipanggil — diganti stub kosong
-# (av.py, cv2.py) supaya `import` di pytgcalls/utils.py tetap sukses.
-pyrogram==2.0.106
-pyaes==1.6.1
-pysocks==1.7.1
-pytgcalls==3.0.0.dev24
-tgcalls==3.0.0.dev6
-yt-dlp>=2024.8.6
+# Sengaja dikosongkan: install asli dilakukan di start command
+# (pip install --no-deps -r requirements-full.txt && python bot.py)
+# karena botkeep tidak meneruskan env var ke fase auto-install,
+# dan --no-deps tidak valid ditulis di requirements.txt.
